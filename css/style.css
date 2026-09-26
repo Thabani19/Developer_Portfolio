@@ -548,6 +548,51 @@ footer p {
     flex: 0 0 320px;
 }
 
+.hero-photo {
+    position: relative;
+    margin-bottom: 24px;
+    animation: heroFloat 5s ease-in-out infinite;
+}
+
+.hero-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0 20px 45px rgba(15, 49, 82, 0.22);
+    position: relative;
+    z-index: 2;
+}
+
+.hero-photo-ring {
+    position: absolute;
+    inset: -10px;
+    border: 2px solid #FF7A00;
+    border-radius: 22px;
+    opacity: 0.5;
+    z-index: 1;
+    animation: heroRingPulse 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-photo,
+    .hero-photo-ring {
+        animation: none;
+    }
+}
+
+@keyframes heroFloat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-14px); }
+}
+
+@keyframes heroRingPulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50%      { transform: scale(1.035); opacity: 0.85; }
+}
+
 .hero-card {
     background-color: #FFFFFF;
     border-radius: 15px;
@@ -633,6 +678,25 @@ footer p {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.about-photo {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(15, 49, 82, 0.15);
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.7s ease;
+}
+
+.about-photo:hover img {
+    transform: scale(1.08);
 }
 
 .about-highlight {
