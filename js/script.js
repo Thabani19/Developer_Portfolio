@@ -94,7 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ".education-item",
         ".journey-item",
         ".looking-card",
-        ".about-highlight"
+        ".about-highlight",
+        ".about-photo"
     ];
 
     cardGroupSelectors.forEach(function (selector) {
