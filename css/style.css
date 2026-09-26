@@ -1167,12 +1167,22 @@ footer p {
     white-space: nowrap;
 
     transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .logo:hover {
     color: #FF7A00;
     transform: scale(1.04);
+}
+
+.logo-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 
